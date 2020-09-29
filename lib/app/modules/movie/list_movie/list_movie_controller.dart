@@ -7,6 +7,7 @@ import 'package:movie_flutter/app/modules/movie/repositories/interfaces/movie_re
 
 part 'list_movie_controller.g.dart';
 
+@Injectable()
 class ListMovieController = _ListMovieControllerBase with _$ListMovieController;
 
 abstract class _ListMovieControllerBase with Store {

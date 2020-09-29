@@ -1,14 +1,17 @@
 import 'package:dio/dio.dart';
 import 'package:dio/native_imp.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:js_ui_components/js_ui_components.dart';
 import 'package:movie_flutter/app/modules/movie/core/model/movie.dart';
+import 'package:movie_flutter/app/modules/movie/repositories/dio_client.dart';
 
 import 'interfaces/movie_repository_interface.dart';
 
-class MovieRepository implements IMovieRepository {
-  final DioForNative client;
+part 'movie_repository.g.dart';
 
-  MovieRepository(this.client);
+@Injectable()
+class MovieRepository implements IMovieRepository {
+  final DioForNative client = DioClient.getInstance();
 
   @override
   void dispose() {}

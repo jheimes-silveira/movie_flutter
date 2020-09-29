@@ -1,9 +1,11 @@
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:mobx/mobx.dart';
 import 'package:movie_flutter/app/modules/movie/core/model/movie.dart';
 import 'package:movie_flutter/app/modules/movie/repositories/interfaces/movie_repository_interface.dart';
 
 part 'movie_controller.g.dart';
 
+@Injectable()
 class MovieController = _MovieControllerBase with _$MovieController;
 
 abstract class _MovieControllerBase with Store {
